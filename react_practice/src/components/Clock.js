@@ -9,7 +9,7 @@ class Clock extends React.Component { ////React.component ke amra extend korechi
   }
 
 
-  componentDidMount(){  /////eeta hocche react.component ar akta method
+  componentDidMount(){  /////eeta hocche react.component ar akta method (chack note book)
     setInterval(() => {
       this.setState({
         date:new Date()
