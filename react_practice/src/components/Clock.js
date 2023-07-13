@@ -8,15 +8,23 @@ class Clock extends React.Component { ////React.component ke amra extend korechi
      
   }
 
+  tick(){
+    this.setState({ ///// this.state.date= new Date() -never do that
+      date:new Date()
+    });
+  }  
+
 
   componentDidMount(){  /////eeta hocche react.component ar akta method (chack note book)
-    setInterval(() => {
-      this.setState({
-        date:new Date()
-      });
-    }, 1000);
+    this.clockTimer =setInterval(() => {this.tick()}, 1000);
   }
-  
+
+
+  componentWillUnmount(){ ////// aita hocce react.component ar r akta method aita kaj hocce jokhon ami amar ai colck timer page theke beriye onno page a jabo browser a tokhon ati (mane timer ta) off hoye jabe jate kore webpage ar performance slow hobe na 
+    clearInterval(this.clockTimer);
+  }
+
+
   
  
     render() {  //////akhane render dite hobe karon React.component render ke call kore tai
