@@ -4,7 +4,7 @@ class Clock extends React.Component { ////React.component ke amra extend korechi
   constructor(props) {  /////(chack note book state and lifecycle)react jokhon ee constructor ta call korbe props soho call korbe
     
     super(props) /////constructor ar moddhe super call korte hoy jar fole react.component ar props oooo call hoye jai  
-    this.state={ date:new Date() }; //// class ar kono props ba peramiter ke amra this. diye tarpor use kori  
+    this.state={ date:new Date() , locale:'bn-BD' }; //// class ar kono props ba peramiter ke amra this. diye tarpor use kori  
      
   }
 
@@ -25,13 +25,26 @@ class Clock extends React.Component { ////React.component ke amra extend korechi
   }
 
 
+  handelClick = (locale) => {    /////this ar problem ba this ar error jeno na hoy she jonno akhane arrow function bebohar kora hoyeche
+   this.setState({
+    locale, 
+   });
+  }
+
+
   
  
     render() {  //////akhane render dite hobe karon React.component render ke call kore tai
+      const {date,locale}=this.state
       return (
+       <div>
+
         <h1 className="heading">
-          <span className="text">hello world{this.state.date.toLocaleTimeString(this.props.locale)}</span>
+          <span className="text">hello world{date.toLocaleTimeString(locale)}</span>
         </h1>
+
+        <button type='button' onClick={this.handelClick.bind(this,'en-US')}>Click Hare</button>
+       </div>
       );
     }
   }
