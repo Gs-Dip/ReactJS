@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 class Clock extends React.Component { ////React.component ke amra extend korechi Clock class ar moddhe
   constructor(props) {  /////(chack note book state and lifecycle)react jokhon ee constructor ta call korbe props soho call korbe
@@ -35,6 +36,7 @@ class Clock extends React.Component { ////React.component ke amra extend korechi
   
  
     render() {  //////akhane render dite hobe karon React.component render ke call kore tai
+      console.log('clock component renderd');
       const {date,locale}=this.state
       return (
        <div>
@@ -43,7 +45,9 @@ class Clock extends React.Component { ////React.component ke amra extend korechi
           <span className="text">hello world{date.toLocaleTimeString(locale)}</span>
         </h1>
 
-        <button type='button' onClick={this.handelClick.bind(this,'en-US')}>Click Hare</button>
+        {/* <Button  change={this.handelClick.bind(this,'en-US')}>Click Hare</Button> */}  {/*{/* amra jodi bind() ar moddhe peramiter pass kori tahole bind protibar akta function props akare pathabe jar fole nextChange kokhono currentChange ar soman hobe na abong Button class ta bar bar render hote thakbe...tai amra nicher niyome likhbo  */}
+
+        <Button change={this.handelClick} locale="en-US">Click Hare</Button>
        </div>
       );
     }
