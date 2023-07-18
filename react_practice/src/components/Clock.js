@@ -37,7 +37,25 @@ class Clock extends React.Component { ////React.component ke amra extend korechi
  
     render() {  //////akhane render dite hobe karon React.component render ke call kore tai
       console.log('clock component renderd');
-      const {date,locale}=this.state
+
+      const {date,locale}=this.state /////akhane date , locale  ke state theke distruckcharing kore newa hoyeche
+      
+     /////111((( let button; /// akhane let diye akta veriable niyechi jar nam button....kintu amra aivabe jsx a likhbo na mane return ar moddhe likhbo na jodi kokhono 3 ta ba tar beshi if else niye kaj korte hoy tokhon amra aivabee korbo return ar baire....2 ta if else hole return ar moddhei kaj korbo      
+      // if(locale === 'bn-BD') {
+      //   button=(
+      //     <Button change={this.handelClick} locale="en-US">
+      //     Click Hare
+      //     </Button> 
+
+      //     );
+      // } else {
+      //   button=( 
+      //   <Button change={this.handelClick} locale="bn-BD">
+      //     Click Hare
+      //     </Button>
+      //   );
+      // }////)))
+      
       return (
        <div>
 
@@ -47,7 +65,20 @@ class Clock extends React.Component { ////React.component ke amra extend korechi
 
         {/* <Button  change={this.handelClick.bind(this,'en-US')}>Click Hare</Button> */}  {/*{/* amra jodi bind() ar moddhe peramiter pass kori tahole bind protibar akta function props akare pathabe jar fole nextChange kokhono currentChange ar soman hobe na abong Button class ta bar bar render hote thakbe...tai amra nicher niyome likhbo  */}
 
-        <Button change={this.handelClick} locale="en-US">Click Hare</Button>
+        {/* <Button change={this.handelClick} locale="en-US">Click Hare</Button> */} {/* ai code ta amra if else ar moddhe bebohar korechi button take toggle korar jonno mane jokhon bangla thakbe tar por english korte parbo aabar jokhon clock ta english thakbe tokhon bangla korte parbo */}
+       
+        {/* {button} */} {/*(111 ar result ta akhane pring kora hoyeche) */}
+
+        {locale === 'bn-BD' ? ( //////jsx a if else aivabe likhbo jodi if else 2ta thake tobo...tar beshi thakle amra return ar opore if else diye likhbo
+          <Button change={this.handelClick} locale="en-US" show={false} enable={false}/>
+               
+
+        ) : (
+
+        <Button change={this.handelClick} locale="bn-BD" show enable/>         
+        
+        )};
+
        </div>
       );
     }
