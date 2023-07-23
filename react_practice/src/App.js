@@ -11,14 +11,28 @@
 // export default App;
 
 
-////////////////// Forms.js take browser a dekhar jonno aita kora hoyeche
-import Forms from './components/Forms';
+////////////////// Forms.js take browser a dekhar jonno aita kora hoyeche------------------------------------------------------
+// import Forms from './components/Forms';
 
-function App() {  
+// function App() {  
    
 
-  return <div><Forms /></div>;
+//   return <div><Forms /></div>;
   
+// }
+
+// export default App;
+
+
+
+/////////////////// Lifting state up---------------------------------------------------------------------------------------------
+
+import Calculate from './components/Calculater';
+
+function App() {
+
+  return <div><Calculate  /></div>
 }
+
 
 export default App;

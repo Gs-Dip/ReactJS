@@ -1,0 +1,23 @@
+import React from "react";
+
+const ScaleName={
+    c: 'Celsius',
+    f: 'Fahrenheit',
+}
+
+function InputTemprature( {temprature,ScaleNameValue,onTempratureChange} ){
+     
+    return(
+        <form action="">
+            <fieldset>
+                <legend>Inter Temprature In {ScaleName[ScaleNameValue]}:</legend>
+                <input type="text" value={temprature} onChange={onTempratureChange} />
+            </fieldset>
+
+             
+        </form>
+    )
+}
+
+
+export default InputTemprature;
