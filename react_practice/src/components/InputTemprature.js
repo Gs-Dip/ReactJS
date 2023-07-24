@@ -11,7 +11,7 @@ function InputTemprature( {temprature,ScaleNameValue,onTempratureChange} ){
         <form action="">
             <fieldset>
                 <legend>Inter Temprature In {ScaleName[ScaleNameValue]}:</legend>
-                <input type="text" value={temprature} onChange={onTempratureChange} />
+                <input type="text" value={temprature} onChange={ (e) => onTempratureChange(e,ScaleNameValue)} />
             </fieldset>
 
              
