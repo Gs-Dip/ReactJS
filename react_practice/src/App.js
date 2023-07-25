@@ -27,11 +27,25 @@
 
 /////////////////// Lifting state up---------------------------------------------------------------------------------------------
 
-import Calculate from './components/Calculater';
+// import Calculate from './components/Calculater';
+
+// function App() {
+
+//   return <div><Calculate  /></div>
+// }
+
+
+// export default App;
+
+
+
+//////////////////COMPOSITION Vs INHERITANCE ----------------------------------------------------------
+///////INHERITANCE---------------------------
+import Test from "./components/inheritance/Test";
 
 function App() {
 
-  return <div><Calculate  /></div>
+  return  <Test />;
 }
 
 
