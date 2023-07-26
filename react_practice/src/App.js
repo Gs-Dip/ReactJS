@@ -41,11 +41,31 @@
 
 //////////////////COMPOSITION Vs INHERITANCE ----------------------------------------------------------
 ///////INHERITANCE---------------------------
-import Test from "./components/inheritance/Test";
+// import Test from "./components/inheritance/Test";
+
+// function App() {
+
+//   return  <Test />;
+// }
+
+
+// export default App;
+
+
+
+//////////////////COMPOSITION--------------------------------------
+import Emoji from "./components/composition/Emoji";
+import Test from "./components/composition/Test";
+
+
 
 function App() {
 
-  return  <Test />;
+  return( 
+  <Emoji>
+    { ({data})=> <Test data={data} /> }
+  </Emoji>
+  )
 }
 
 
