@@ -54,6 +54,27 @@
 
 
 //////////////////COMPOSITION--------------------------------------
+// import Emoji from "./components/composition/Emoji";
+// import Test from "./components/composition/Test";
+
+
+
+// function App() {
+
+//   return( 
+//   <Emoji>
+//     { ({data})=> <Test data={data} /> }
+//   </Emoji>
+//   )
+// }
+
+
+// export default App;
+
+
+///////////////NESTED COMPOSITION----------------------------
+
+import Bracket from "./components/composition/Bracket";
 import Emoji from "./components/composition/Emoji";
 import Test from "./components/composition/Test";
 
@@ -63,7 +84,12 @@ function App() {
 
   return( 
   <Emoji>
-    { ({data})=> <Test data={data} /> }
+    { ({data})=> (
+    
+    <Bracket>
+      { ({bra})=>  <Test data={data} bra={bra} /> }    
+    </Bracket> )}
+
   </Emoji>
   )
 }
