@@ -74,24 +74,41 @@
 
 ///////////////NESTED COMPOSITION----------------------------
 
-import Bracket from "./components/composition/Bracket";
-import Emoji from "./components/composition/Emoji";
-import Test from "./components/composition/Test";
+// import Bracket from "./components/composition/Bracket";
+// import Emoji from "./components/composition/Emoji";
+// import Test from "./components/composition/Test";
 
 
+
+// function App() {
+
+//   return( 
+//   <Emoji>
+//     { ({data})=> (
+    
+//     <Bracket>
+//       { ({bra})=>  <Test data={data} bra={bra} /> }    
+//     </Bracket> )}
+
+//   </Emoji>
+//   )
+// }
+
+
+// export default App;
+
+
+//////////////////////Higher Order Component(HOC)-------------------------
+
+import ClickCounter from "./components/Higher_Order_Component(HOC)/ClickCounter";
+import HoverCounter from "./components/Higher_Order_Component(HOC)/HoverCounter";
 
 function App() {
-
   return( 
-  <Emoji>
-    { ({data})=> (
-    
-    <Bracket>
-      { ({bra})=>  <Test data={data} bra={bra} /> }    
-    </Bracket> )}
-
-  </Emoji>
-  )
+  <div> 
+    <ClickCounter /> 
+    <HoverCounter/>
+  </div> )
 }
 
 
