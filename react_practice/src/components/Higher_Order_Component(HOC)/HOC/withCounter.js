@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Dip = (OriginalComponent) =>{
+const Dip = (OriginalComponent) =>{  ////// akhane ami akta function likhechi jeta OriginalComponent ar maddhome akta component receive kore abong pore akta new component return kore(ai ta hocche HOC ar concept)
     class NewComponent extends React.Component{
         state={
             count:0,
@@ -14,7 +14,7 @@ const Dip = (OriginalComponent) =>{
         render(){
             const {count}= this.state
             return(
-                <OriginalComponent />
+                <OriginalComponent count={count} handelCount={this.handelCount} /> ////// Opore OriginalComponent ar moddhe amra je component na pabo peramiter hishebe tar moddhe aabar ami akhan theke 2 ta peramiter pass kore diyechi count abong handelCount name
             )
         }
     }

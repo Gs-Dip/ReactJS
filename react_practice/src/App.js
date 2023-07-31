@@ -98,18 +98,37 @@
 // export default App;
 
 
-//////////////////////Higher Order Component(HOC)-------------------------
+//////////////////////HOC eemon code ar jonno korte hobe jodi bar bar code repete korte hoy same kaj tai ami HOC diye niche korechi code repete na kore barbar-------------------------
 
-import ClickCounter from "./components/Higher_Order_Component(HOC)/ClickCounter";
-import HoverCounter from "./components/Higher_Order_Component(HOC)/HoverCounter";
+// import ClickCounter from "./components/Higher_Order_Component(HOC)/ClickCounter";
+// import HoverCounter from "./components/Higher_Order_Component(HOC)/HoverCounter";
+
+// function App() {
+//   return( 
+//   <div className="app"> 
+//     <ClickCounter /> 
+//     <HoverCounter/>
+//   </div> )
+// }
+
+
+// export default App;
+
+///////////// HOC -------------------------------------------
+
+import ButtonClickCounter from "./components/Higher_Order_Component(HOC)/HOC/ButtonClickCounter";
+import HoverMouse from "./components/Higher_Order_Component(HOC)/HOC/HoverMouse";
+
 
 function App() {
-  return( 
-  <div> 
-    <ClickCounter /> 
-    <HoverCounter/>
-  </div> )
-}
 
+  return( 
+    <div>
+      <ButtonClickCounter />
+      <HoverMouse />
+    </div>  
+     
+  )
+}
 
 export default App;
