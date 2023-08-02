@@ -116,19 +116,51 @@
 
 ///////////// HOC -------------------------------------------
 
-import ButtonClickCounter from "./components/Higher_Order_Component(HOC)/HOC/ButtonClickCounter";
-import HoverMouse from "./components/Higher_Order_Component(HOC)/HOC/HoverMouse";
+// import ButtonClickCounter from "./components/Higher_Order_Component(HOC)/HOC/ButtonClickCounter";
+// import HoverMouse from "./components/Higher_Order_Component(HOC)/HOC/HoverMouse";
 
+
+// function App() {
+
+//   return( 
+//     <div>
+//       <ButtonClickCounter />
+//       <HoverMouse />
+//     </div>  
+     
+//   )
+// }
+
+// export default App;
+
+/////////////Render Props---------------------------------------------
+//import User from "./components/RenderProps/User";
+
+// function App() {  //////////////////////// for User.js file (1)
+//   return(
+//     <User name="Anik"/>
+//   )
+// }
+
+// function App() {   //////////////////////// for User.js file (2)
+//   return(
+//     <User name={() =>'Dip'}/>
+//   )
+// }
+
+// function App() {     //////////////////////// for User.js file (3)
+//   return <User render={(isLoggdIn) => isLoggdIn ? 'Dibbo' : 'Gust'}/> /////akhane ami peramiter ar nam diyechi render
+// }
+
+// export default App;
+
+///////////////////////////RENDER_PROPS----------------------------------------------------------------------------------------------------
+
+import ClickCounter from "./components/RenderProps/RENDER_PROPS/ClickCounter";
+import Counter from "./components/RenderProps/RENDER_PROPS/Counter";
 
 function App() {
-
-  return( 
-    <div>
-      <ButtonClickCounter />
-      <HoverMouse />
-    </div>  
-     
-  )
+  return( <Counter render={ () => <ClickCounter/> } /> )
 }
 
 export default App;
