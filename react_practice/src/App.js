@@ -134,8 +134,7 @@
 // export default App;
 
 /////////////Render Props---------------------------------------------
-//import User from "./components/RenderProps/User";
-
+// import User from "./components/RenderProps/User"
 // function App() {  //////////////////////// for User.js file (1)
 //   return(
 //     <User name="Anik"/>
@@ -149,18 +148,63 @@
 // }
 
 // function App() {     //////////////////////// for User.js file (3)
-//   return <User render={(isLoggdIn) => isLoggdIn ? 'Dibbo' : 'Gust'}/> /////akhane ami peramiter ar nam diyechi render
+//  return <User render={(isLoggdIn) => isLoggdIn ? 'Dibbo' : 'Gust'}/> /////akhane ami peramiter ar nam diyechi render
 // }
 
 // export default App;
 
 ///////////////////////////RENDER_PROPS----------------------------------------------------------------------------------------------------
 
-import ClickCounter from "./components/RenderProps/RENDER_PROPS/ClickCounter";
-import Counter from "./components/RenderProps/RENDER_PROPS/Counter";
+// import ClickCounter from "./components/RenderProps/RENDER_PROPS/ClickCounter";
+// import Counter from "./components/RenderProps/RENDER_PROPS/Counter";
+// import HoverCounter from "./components/RenderProps/RENDER_PROPS/HoverCounter";
+ 
 
-function App() {
-  return( <Counter render={ () => <ClickCounter/> } /> )
-}
+// function App() {
+//   return(
+    // <div>
+      
+    //   <Counter render={ (count , handelCount) => (<ClickCounter count={count} handelCount={handelCount} /> )} /> 
+    //   <Counter render={(count,handelCount) => ( <HoverCounter count={count} handelCount={handelCount} /> )}/>
+    
+    // </div> 
+
+    ////or ---------------------------------------<Counter> ar moddhe ja ache ta hocche Counter ar children
+   
+//    <div> 
+//       <Counter> 
+//       {(count , handelCount) => (< ClickCounter count={count} handelCount={handelCount} /> )}  
+//       </Counter>
+
+//       <Counter>
+//       {(count , handelCount) => (< HoverCounter count={count} handelCount={handelCount} /> )}  
+
+//       </Counter>
+//     </div>
+    
+//     )
+// }
+
+// export default App;
+
+
+/////// Practice  (Render Props)-------------------------------
+import ButtonClick from "./components/RenderProps/Delete/Button";
+import Counter from "./components/RenderProps/Delete/Counter";
+import Hover from "./components/RenderProps/Delete/Hover";
+
+function App(){
+  return (
+    <div>
+      <Counter>
+        {(count,HandelClickAndHover) => (<ButtonClick count={count} HandelClickAndHover={HandelClickAndHover} />)}
+      </Counter>
+
+      <Counter>
+        {(count,HandelClickAndHover) => (<Hover count={count} HandelClickAndHover={HandelClickAndHover}/>)}
+      </Counter>
+    </div>
+  )
+}  
 
 export default App;

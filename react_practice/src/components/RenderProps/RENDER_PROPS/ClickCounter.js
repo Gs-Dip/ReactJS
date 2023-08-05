@@ -1,11 +1,11 @@
 import React from "react";
 
-class ClickCounter extends React.Component{       
-    render(){        
+function ClickCounter({count,handelCount}){       
+            
         return(
-            <button type="button" onClick={this.handelCount}>Clicked {count} Times</button>
+            <button type="button" onClick={handelCount}>Clicked {count} Times</button>
         )
-    }
+     
 }
 
 

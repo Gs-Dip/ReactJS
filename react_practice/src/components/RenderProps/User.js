@@ -8,7 +8,7 @@
 
 
 function User({render}) {    ///////(3)
-    return render(false); //////akhane true hole ba true dile sotto milbe abong Dibbo print korbe false dile Gust print korbe
+    return render(true); //////akhane true hole ba true dile sotto milbe abong Dibbo print korbe false dile Gust print korbe
 } 
 
 export default User;
